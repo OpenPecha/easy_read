@@ -19,10 +19,10 @@ def tokenize():
     config = Config(dialect_name='general', base_path=Path.home())
     wt= WordTokenizer(config=config)
     input_text = request.form['ipText']
-    tokens = get_tokens(wt, input_text)
+    tokens = get_tokens(wt, input_text,)
     ouput_text = "".join([str(token) for token in tokens])
-    return render_template('index.html',input_text=input_text,output = ouput_text)
 
+    return render_template('index.html',input_text=input_text,output = ouput_text)
 
 @app.route('/download_token',methods=['post'])
 def download_token():
@@ -30,6 +30,7 @@ def download_token():
     with open('output.txt', 'w', encoding='utf-8') as file:
               file.write(output_text) 
     return send_file('output.txt', as_attachment=True)
+
 
 
 
