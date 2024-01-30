@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 def get_tokens(wt, text):
     tokens = wt.tokenize(text, split_affixes=False)
-    return tokens
+    return '  '.join(token['text'] for token in tokens)
 
 @app.route('/')
 def index():
