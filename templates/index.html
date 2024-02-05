@@ -15,9 +15,14 @@
   <body>
     <!-- header -->
     <div class="header">
-      <h1>TOKENIZER</h1>
-      <h6>A Website to Tokenize Tibetan Text</h6>
-      <h6>བོད་ཡིག་གི་དཔེ་ཆའི་གསང་རྟགས་འགོད་པའི་དྲྭ་ཚིགས་ཤིག་</h6>
+      <h1>Botok Reader</h1>
+      <h6>
+        An online tool designed to enhance the readability and comprehension of
+        Tibetan texts.
+      </h6>
+      <h6>
+        བོད་ཡིག་གི་དཔེ་ཆ་རྣམས་གོ་སླ་དང་ཀློག་བདེ་རུ་གཏོང་བའི་དྲ་ཐོག་གི་ལག་ཆ་ཞིག་རེད།
+      </h6>
     </div>
     <!-- body -->
     <div class="float-parent">
@@ -34,19 +39,19 @@
               name="ipText"
               placeholder="Type or paste the text here."
             ></textarea>
-            <button type="submit">Tokenize Text</button>
+            <button type="submit">Enhance Text</button>
           </form>
         </div>
       </div>
       <!-- ṛesult -->
       <div class="float-child">
         <div class="result">
-          <h6 style="text-align: center">Tokenized Text</h6>
+          <h6 style="text-align: center">Enhanced Text</h6>
           <form method="post" action="{{url_for('download_token')}}">
             <!-- <label for="outputText">Tokenized Text:</label> -->
             <textarea id="opText" name="opText">{{ output }}</textarea>
             <input type="hidden" name="opText" id="hiddenText" />
-            <button type="submit">Download Token</button>
+            <button type="submit">Download Text</button>
           </form>
         </div>
       </div>
